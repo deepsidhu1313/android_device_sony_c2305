@@ -54,6 +54,9 @@ adb pull /system/bin/mtkbt  $PROP_BIN_DIR
 adb pull /system/bin/mtkGD  $PROP_BIN_DIR
 adb pull /system/bin/thermal  $PROP_BIN_DIR
 adb pull /system/bin/thermal_manager $PROP_BIN_DIR
+adb pull /system/vendor/bin/pvrsrvctl $PROP_BIN_DIR
+adb pull /system/vendor/bin/rc.fac $PROP_BIN_DIR
+
 # Change permissions of binaries recursively 
 chmod -Rv 755 $PROP_BIN_DIR
 
@@ -61,6 +64,60 @@ chmod -Rv 755 $PROP_BIN_DIR
 
 #libs start
 mkdir -p $PROP_LIB_DIR
+
+adb pull /system/lib/libbessound_mtk.so $PROP_LIB_DIR
+adb pull /system/lib/libbluetoothem_mtk.so $PROP_LIB_DIR
+adb pull /system/lib/libbluetooth_mtk.so $PROP_LIB_DIR
+adb pull /system/lib/libc_malloc_debug_mtk.so $PROP_LIB_DIR
+adb pull /system/lib/drm/libdrmmtkplugin.so $PROP_LIB_DIR
+adb pull /system/lib/libdrmmtkutil.so $PROP_LIB_DIR
+adb pull /system/lib/libdrmmtkwhitelist.so $PROP_LIB_DIR
+adb pull /system/lib/libmtka2dp.so $PROP_LIB_DIR
+adb pull /system/lib/libmtkbtextadp.so $PROP_LIB_DIR
+adb pull /system/lib/libmtkbtextadpa2dp.so $PROP_LIB_DIR
+adb pull /system/lib/libmtkbtextpan.so $PROP_LIB_DIR
+adb pull /system/lib/libmtkbtextspp.so $PROP_LIB_DIR
+adb pull /system/lib/libmtk_drvb.so $PROP_LIB_DIR
+adb pull /system/lib/libmtkhdmi_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAacDec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAacEnc.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAdpcmDec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAdpcmEnc.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAmrEnc.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAMRNBDec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAMRWBDec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxApeDec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxAwbEnc.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxCore.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxFlacDec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxG711Dec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxMp3Dec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxVdec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxVenc.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxVorbisDec.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkOmxVorbisEnc.so $PROP_LIB_DIR
+adb pull /system/lib/libmtkplayer.so $PROP_LIB_DIR
+adb pull /system/lib/libMtkVideoTranscoder.so $PROP_LIB_DIR
+adb pull /system/lib/libmtk_vt_client.so $PROP_LIB_DIR
+adb pull /system/lib/libmtk_vt_em.so $PROP_LIB_DIR
+adb pull /system/lib/libmtk_vt_service.so $PROP_LIB_DIR
+adb pull /system/lib/libmtk_vt_swip.so $PROP_LIB_DIR
+adb pull /system/lib/libmtk_vt_utils.so $PROP_LIB_DIR
+adb pull /system/lib/libpalwlan_mtk.so $PROP_LIB_DIR
+adb pull /system/lib/librilmtk.so $PROP_LIB_DIR
+adb pull /system/lib/librilmtkmd2.so $PROP_LIB_DIR
+adb pull /system/lib/libutilrilmtk.so $PROP_LIB_DIR
+adb pull /system/lib/modules/mtk_fm_drv.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/mtk_hif_sdio.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/mtklfb.ko $PROP_LIB_DIR
+adb pull /system/lib/mtk-ril.so $PROP_LIB_DIR
+adb pull /system/lib/mtk-rilmd2.so $PROP_LIB_DIR
+adb pull /system/lib/modules/mtk_stp_bt.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/mtk_stp_gps.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/mtk_stp_uart.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/mtk_stp_wmt.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/mtk_wmt_wifi.ko $PROP_LIB_DIR
+
 
 
 #libs end
