@@ -41,8 +41,25 @@ adb pull /system/app/VoiceCommand.apk  $PROP_DIR
 adb pull /system/app/VoiceUnlock.apk  $PROP_DIR
 adb pull /system/app/YGPS.apk  $PROP_DIR
 adb pull /system/app/LocationEM.apk $PROP_DIR
+adb pull /system/app/dm.apk $PROP_DIR
+
+
 
 #apks end
+
+
+#framework files start
+
+adb pull /system/framework/mediatek-common.jar $PROP_DIR
+adb pull /system/framework/mediatek-framework.jar $PROP_DIR
+adb pull /system/framework/mediatek-op.jar $PROP_DIR
+adb pull /system/framework/mediatek-res.apk $PROP_DIR
+adb pull /system/framework/theme-res-mint.apk $PROP_DIR
+adb pull /system/framework/theme-res-mocha.apk $PROP_DIR
+adb pull /system/framework/theme-res-raspberry.apk $PROP_DIR
+
+#framework end
+
 
 
 #binaries start
