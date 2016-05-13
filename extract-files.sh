@@ -14,10 +14,10 @@
 # limitations under the License.
 DEVICE=c2305
 MANUFACTURER=sony
-PROP_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-PROP_BIN_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin
+PROP_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/app/
+PROP_BIN_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin/
 
-
+# Fetch (mediatek) apks
 mkdir -p $PROP_DIR
 adb pull /system/app/MTKAndroidSuiteDaemon.apk $PROP_DIR
 adb pull /system/app/MtkBt.apk $PROP_DIR
@@ -25,10 +25,19 @@ adb pull /system/app/MTKThermalManager.apk $PROP_DIR
 adb pull /system/app/AtciService.apk $PROP_DIR
 adb pull /system/app/BatteryWarning.apk  $PROP_DIR
 adb pull /system/app/CellConnService.apk  $PROP_DIR
+adb pull /system/app/CDS_INFO.apk $PROP_DIR
 adb pull /system/app/DataUsageLockScreenClient.apk  $PROP_DIR
 adb pull /system/app/EngineerMode.apk  $PROP_DIR
 adb pull /system/app/EngineerModeSim.apk  $PROP_DIR
 adb pull /system/app/Radio.apk  $PROP_DIR
+adb pull /system/app/OMAClientProvisioning.apk  $PROP_DIR
+adb pull /system/app/Omacp.apk  $PROP_DIR
+adb pull /system/app/OmaDownload.apk  $PROP_DIR
+adb pull /system/app/OmaV1AgentDownloadServices.apk  $PROP_DIR
+adb pull /system/app/VoiceCommand.apk  $PROP_DIR
+adb pull /system/app/VoiceUnlock.apk  $PROP_DIR
+adb pull /system/app/YGPS.apk  $PROP_DIR
+adb pull /system/app/LocationEM.apk $PROP_DIR
 
 #binaries
 
