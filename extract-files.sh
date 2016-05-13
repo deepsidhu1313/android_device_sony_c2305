@@ -16,8 +16,11 @@ DEVICE=c2305
 MANUFACTURER=sony
 PROP_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/app/
 PROP_BIN_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin/
+PROP_LIB_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/
 
 # Fetch (mediatek) apks
+# apks start
+
 mkdir -p $PROP_DIR
 adb pull /system/app/MTKAndroidSuiteDaemon.apk $PROP_DIR
 adb pull /system/app/MtkBt.apk $PROP_DIR
@@ -39,7 +42,10 @@ adb pull /system/app/VoiceUnlock.apk  $PROP_DIR
 adb pull /system/app/YGPS.apk  $PROP_DIR
 adb pull /system/app/LocationEM.apk $PROP_DIR
 
-#binaries
+#apks end
+
+
+#binaries start
 
 mkdir -p $PROP_BIN_DIR
 adb pull /system/bin/msensord  $PROP_BIN_DIR
@@ -48,10 +54,19 @@ adb pull /system/bin/mtkbt  $PROP_BIN_DIR
 adb pull /system/bin/mtkGD  $PROP_BIN_DIR
 adb pull /system/bin/thermal  $PROP_BIN_DIR
 adb pull /system/bin/thermal_manager $PROP_BIN_DIR
-
+# Change permissions of binaries recursively 
 chmod -Rv 755 $PROP_BIN_DIR
 
+#binaries end
 
+#libs start
+mkdir -p $PROP_LIB_DIR
+
+
+#libs end
+
+
+#old file content
 adb pull /system/app/BIP.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/BIP.apk
 adb pull /system/app/IMSFramework.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/IMSFramework.apk
 adb pull /system/app/RTN.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/RTN.apk
