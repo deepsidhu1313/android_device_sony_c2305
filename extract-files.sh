@@ -43,6 +43,9 @@ adb pull /system/app/YGPS.apk  $PROP_DIR
 adb pull /system/app/LocationEM.apk $PROP_DIR
 adb pull /system/app/dm.apk $PROP_DIR
 
+#Not sure if these files are necessary for Cynogenmod
+adb pull /system/app/DrmDialogs.apk $PROP_DIR 
+adb pull /system/app/DrmProvider.apk $PROP_DIR
 
 
 #apks end
@@ -177,16 +180,31 @@ adb pull /system/lib/libpalwlan_mtk.so $PROP_LIB_DIR
 adb pull /system/lib/librilmtk.so $PROP_LIB_DIR
 adb pull /system/lib/librilmtkmd2.so $PROP_LIB_DIR
 adb pull /system/lib/libutilrilmtk.so $PROP_LIB_DIR
+adb pull /system/lib/mtk-ril.so $PROP_LIB_DIR
+adb pull /system/lib/mtk-rilmd2.so $PROP_LIB_DIR
+
+
+adb pull /system/lib/modules/ccci.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/ccci_plat.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/devapc.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/devinfo.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/modules.dep.bb $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_fm_drv.ko $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_hif_sdio.ko $PROP_LIB_DIR
 adb pull /system/lib/modules/mtklfb.ko $PROP_LIB_DIR
-adb pull /system/lib/mtk-ril.so $PROP_LIB_DIR
-adb pull /system/lib/mtk-rilmd2.so $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_stp_bt.ko $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_stp_gps.ko $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_stp_uart.ko $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_stp_wmt.ko $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_wmt_wifi.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/pvrsrvkm.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/scsi_tgt.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/scsi_wait_scan.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/sec.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/vcodec_kernel_driver.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/wlan.ko $PROP_LIB_DIR
+adb pull /system/lib/modules/wlan_mt6628.ko $PROP_LIB_DIR
+
 
 
 #sound libs
