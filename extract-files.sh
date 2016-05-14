@@ -17,7 +17,7 @@ MANUFACTURER=sony
 PROP_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/app/
 PROP_BIN_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bin/
 PROP_LIB_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/lib/
-
+PROP_ETC_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary/etc/
 # Fetch (mediatek) apks
 # apks start
 
@@ -79,6 +79,59 @@ chmod -Rv 755 $PROP_BIN_DIR
 
 #binaries end
 
+
+#mtk 6628 wifi, bluetooth, GPS, FM radio firmware files
+
+
+mkdir -p $PROP_ETC_DIR
+
+adb pull /system/etc/firmware/mt6628/mt6628_fm_rom.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v1_coeff.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v1_patch.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v2_coeff.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v2_patch.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v3_coeff.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v3_patch.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v4_coeff.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v4_patch.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v5_coeff.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628/mt6628_fm_v5_patch.bin $PROP_ETC_DIR
+
+adb pull /system/etc/firmware/catcher_filter.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/modem.img $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_ant_m1.cfg $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_patch_e1_hdr.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_patch_e2_0_hdr.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_patch_e2_1_hdr.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/S_ANDRO_SFL.ini $PROP_ETC_DIR
+adb pull /system/etc/firmware/WIFI_RAM_CODE $PROP_ETC_DIR
+adb pull /system/etc/firmware/WIFI_RAM_CODE_E6 $PROP_ETC_DIR
+adb pull /system/etc/firmware/WIFI_RAM_CODE_MT6628 $PROP_ETC_DIR
+adb pull /system/etc/firmware/WMT.cfg $PROP_ETC_DIR
+
+adb pull /system/lib/modules/sec.ko $PROP_ETC_DIR
+adb pull /system/lib/modules/ccci.ko $PROP_ETC_DIR
+adb pull /system/lib/modules/ccci_plat.ko $PROP_ETC_DIR
+adb pull /system/etc/security/otacerts.zip $PROP_ETC_DIR
+
+
+adb pull /system/etc/firmware/catcher_filter.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/modem.img $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_ant_m1.cfg $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_patch_e1_hdr.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_patch_e2_0_hdr.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/mt6628_patch_e2_1_hdr.bin $PROP_ETC_DIR
+adb pull /system/etc/firmware/S_ANDRO_SFL.ini $PROP_ETC_DIR
+adb pull /system/etc/firmware/WIFI_RAM_CODE $PROP_ETC_DIR
+adb pull /system/etc/firmware/WIFI_RAM_CODE_E6 $PROP_ETC_DIR
+adb pull /system/etc/firmware/WIFI_RAM_CODE_MT6628 $PROP_ETC_DIR
+adb pull /system/etc/firmware/WMT.cfg $PROP_ETC_DIR
+
+adb pull /system/etc/fmr/fm_cust.cfg $PROP_ETC_DIR #FM RADIO CONFIG FILE
+
+#mtk 6628 files end
+
+
 #libs start
 mkdir -p $PROP_LIB_DIR
 
@@ -136,8 +189,44 @@ adb pull /system/lib/modules/mtk_stp_wmt.ko $PROP_LIB_DIR
 adb pull /system/lib/modules/mtk_wmt_wifi.ko $PROP_LIB_DIR
 
 
+#sound libs
+adb pull /system/vendor/etc/audio_effects.conf $PROP_LIB_DIR #sound config file
+adb pull /system/lib/soundfx/libbundlewrapper.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libreverbwrapper.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libvisualizer.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libaudiopreprocessing.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libdownmix.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libsoundaurawrapper.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libhearingprotection.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libpreeffectwrapper.so $PROP_LIB_DIR
+adb pull /system/lib/soundfx/libposteffectwrapper.so $PROP_LIB_DIR
+
+
+#vendor libs start
+adb pull /system/vendor/lib/libBLPP.so  $PROP_LIB_DIR
+adb pull /system/vendor/lib/libglslcompiler.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libIMGegl.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libpvr2d.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libpvrANDROID_WSEGL.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libPVRScopeServices.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libsrv_init.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libsrv_um.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libusc.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libwvdrm_L3.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libwvm.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/libWVStreamControlAPI_L3.so $PROP_LIB_DIR
+
+adb pull /system/vendor/lib/drm/libdrmwvmplugin.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/egl/libEGL_mtk.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/egl/libGLESv1_CM_mtk.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/egl/libGLESv2_mtk.so $PROP_LIB_DIR
+adb pull /system/vendor/lib/hw/gralloc.mt6589.so $PROP_LIB_DIR
+#vendor libs end
+
+
 
 #libs end
+
 
 
 #old file content
