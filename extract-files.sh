@@ -68,14 +68,42 @@ adb pull /system/framework/theme-res-raspberry.apk $PROP_DIR
 #binaries start
 
 mkdir -p $PROP_BIN_DIR
-adb pull /system/bin/msensord  $PROP_BIN_DIR
-adb pull /system/bin/mtk_agpsd  $PROP_BIN_DIR
-adb pull /system/bin/mtkbt  $PROP_BIN_DIR
-adb pull /system/bin/mtkGD  $PROP_BIN_DIR
-adb pull /system/bin/thermal  $PROP_BIN_DIR
-adb pull /system/bin/thermal_manager $PROP_BIN_DIR
 adb pull /system/vendor/bin/pvrsrvctl $PROP_BIN_DIR
 adb pull /system/vendor/bin/rc.fac $PROP_BIN_DIR
+
+
+
+adb pull /system/bin/6620_launcher $PROP_BIN_DIR
+adb pull /system/bin/6620_wmt_concurrency $PROP_BIN_DIR
+adb pull /system/bin/akmd8963 $PROP_BIN_DIR
+adb pull /system/bin/akmd8975 $PROP_BIN_DIR
+adb pull /system/bin/atcid $PROP_BIN_DIR
+adb pull /system/bin/atci_service $PROP_BIN_DIR
+adb pull /system/bin/btconfig $PROP_BIN_DIR
+adb pull /system/bin/btlogmask $PROP_BIN_DIR
+adb pull /system/bin/drmserver $PROP_BIN_DIR
+adb pull /system/bin/gsm0710muxd $PROP_BIN_DIR
+adb pull /system/bin/gsm0710muxdmd2 $PROP_BIN_DIR
+adb pull /system/bin/memsicd $PROP_BIN_DIR
+adb pull /system/bin/memsicd3416x $PROP_BIN_DIR
+adb pull /system/bin/msensord $PROP_BIN_DIR
+adb pull /system/bin/mtk_agpsd $PROP_BIN_DIR
+adb pull /system/bin/mtkbt $PROP_BIN_DIR
+adb pull /system/bin/mtkGD $PROP_BIN_DIR
+adb pull /system/bin/nvram_agent_binder $PROP_BIN_DIR
+adb pull /system/bin/nvram_daemon $PROP_BIN_DIR
+adb pull /system/bin/sensorservice $PROP_BIN_DIR
+adb pull /system/bin/service $PROP_BIN_DIR
+adb pull /system/bin/servicemanager $PROP_BIN_DIR
+adb pull /system/bin/settings $PROP_BIN_DIR
+adb pull /system/bin/ta_reader $PROP_BIN_DIR
+adb pull /system/bin/ta_sync_md $PROP_BIN_DIR
+adb pull /system/bin/tc $PROP_BIN_DIR
+adb pull /system/bin/thermal $PROP_BIN_DIR
+adb pull /system/bin/thermal_manager $PROP_BIN_DIR
+adb pull /system/bin/updatemiscta $PROP_BIN_DIR
+adb pull /system/bin/wlan_loader $PROP_BIN_DIR
+
 
 # Change permissions of binaries recursively 
 chmod -Rv 755 $PROP_BIN_DIR
@@ -182,6 +210,113 @@ adb pull /system/lib/librilmtkmd2.so $PROP_LIB_DIR
 adb pull /system/lib/libutilrilmtk.so $PROP_LIB_DIR
 adb pull /system/lib/mtk-ril.so $PROP_LIB_DIR
 adb pull /system/lib/mtk-rilmd2.so $PROP_LIB_DIR
+
+
+
+adb pull /system/lib/libalmkdrv.so $PROP_LIB_DIR
+adb pull /system/lib/libatciserv_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libbluetoothdrv.so $PROP_LIB_DIR
+adb pull /system/lib/libbluetooth_relayer.so $PROP_LIB_DIR
+adb pull /system/lib/libbtcust.so $PROP_LIB_DIR
+adb pull /system/lib/libbtcusttable.so $PROP_LIB_DIR
+adb pull /system/lib/libbtpcm.so $PROP_LIB_DIR
+adb pull /system/lib/libbtsniff.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.camadapter.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.campipe.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.camshot.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.client.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.paramsmgr.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.utils.so $PROP_LIB_DIR
+adb pull /system/lib/libcamalgo.so $PROP_LIB_DIR
+adb pull /system/lib/libcam_camera_exif.so $PROP_LIB_DIR
+adb pull /system/lib/libcamdrv.so $PROP_LIB_DIR
+adb pull /system/lib/libcamera_client.so $PROP_LIB_DIR
+adb pull /system/lib/libcameracustom.so $PROP_LIB_DIR
+adb pull /system/lib/libcamera_metadata.so $PROP_LIB_DIR
+adb pull /system/lib/libcameraservice.so $PROP_LIB_DIR
+adb pull /system/lib/libdrm1.so $PROP_LIB_DIR
+adb pull /system/lib/libdrm1_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libdrmdecrypt.so $PROP_LIB_DIR
+adb pull /system/lib/libdrmframework.so $PROP_LIB_DIR
+adb pull /system/lib/libdrmframework_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libEGL.so $PROP_LIB_DIR
+adb pull /system/lib/libem_bt_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libem_gpio_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libem_modem_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libem_support_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libem_usb_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libem_wifi_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libETC1.so $PROP_LIB_DIR
+adb pull /system/lib/libexif.so $PROP_LIB_DIR
+adb pull /system/lib/libexif_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextavrcp.so $PROP_LIB_DIR
+adb pull /system/lib/libextavrcp_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextbip.so $PROP_LIB_DIR
+adb pull /system/lib/libextbip_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextbpp.so $PROP_LIB_DIR
+adb pull /system/lib/libextbpp_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextdun_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextftp.so $PROP_LIB_DIR
+adb pull /system/lib/libextftp_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libexthid.so $PROP_LIB_DIR
+adb pull /system/lib/libexthid_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextmap_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextopp.so $PROP_LIB_DIR
+adb pull /system/lib/libextopp_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextpan_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextpbap.so $PROP_LIB_DIR
+adb pull /system/lib/libextpbap_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextsimap.so $PROP_LIB_DIR
+adb pull /system/lib/libextsimap_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libextsys.so $PROP_LIB_DIR
+adb pull /system/lib/libextsys_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libexttestmode.so $PROP_LIB_DIR
+adb pull /system/lib/libface.so $PROP_LIB_DIR
+adb pull /system/lib/libfacelock_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libfeatureio.so $PROP_LIB_DIR
+adb pull /system/lib/libFFTEm.so $PROP_LIB_DIR
+adb pull /system/lib/libfile_op.so $PROP_LIB_DIR
+adb pull /system/lib/libfilterfw.so $PROP_LIB_DIR
+adb pull /system/lib/libfilterpack_facedetect.so $PROP_LIB_DIR
+adb pull /system/lib/libfilterpack_imageproc.so $PROP_LIB_DIR
+adb pull /system/lib/libflv.so $PROP_LIB_DIR
+adb pull /system/lib/libflvextractor.so $PROP_LIB_DIR
+adb pull /system/lib/libfmmt6616.so $PROP_LIB_DIR
+adb pull /system/lib/libfmmt6620.so $PROP_LIB_DIR
+adb pull /system/lib/libfmmt6626.so $PROP_LIB_DIR
+adb pull /system/lib/libfmmt6628.so $PROP_LIB_DIR
+adb pull /system/lib/libfrsdk.so $PROP_LIB_DIR
+adb pull /system/lib/libgabi++.so $PROP_LIB_DIR
+adb pull /system/lib/libgames_rtmp_jni.so $PROP_LIB_DIR
+adb pull /system/lib/libgccdemangle.so $PROP_LIB_DIR
+adb pull /system/lib/libGdmaScalerPipe.so $PROP_LIB_DIR
+adb pull /system/lib/libGLES_trace.so $PROP_LIB_DIR
+adb pull /system/lib/libGLESv1_CM.so $PROP_LIB_DIR
+adb pull /system/lib/libGLESv2.so $PROP_LIB_DIR
+adb pull /system/lib/libI420colorconvert.so $PROP_LIB_DIR
+adb pull /system/lib/libicui18n.so $PROP_LIB_DIR
+adb pull /system/lib/libJniAtvService.so $PROP_LIB_DIR
+adb pull /system/lib/libjnigraphics.so $PROP_LIB_DIR
+adb pull /system/lib/libjni_pq.so $PROP_LIB_DIR
+adb pull /system/lib/libOpenMAXAL.so $PROP_LIB_DIR
+adb pull /system/lib/libOpenSLES.so $PROP_LIB_DIR
+adb pull /system/lib/libportable.so $PROP_LIB_DIR
+adb pull /system/lib/libpower.so $PROP_LIB_DIR
+adb pull /system/lib/libpowermanager.so $PROP_LIB_DIR
+adb pull /system/lib/libpppbtdun.so $PROP_LIB_DIR
+adb pull /system/lib/libprotobuf-c.so $PROP_LIB_DIR
+adb pull /system/lib/libril.so $PROP_LIB_DIR
+adb pull /system/lib/libsensorservice.so $PROP_LIB_DIR
+adb pull /system/lib/libsoundpool.so $PROP_LIB_DIR
+adb pull /system/lib/libwebcore.so $PROP_LIB_DIR
+adb pull /system/lib/libwebp_android.so $PROP_LIB_DIR
+adb pull /system/lib/libwebrtc_audio_preprocessing. $PROP_LIB_DIRso
+adb pull /system/lib/libwifitest.so $PROP_LIB_DIR
+adb pull /system/lib/libwilhelm.so $PROP_LIB_DIR
+adb pull /system/lib/libwpa_client.so $PROP_LIB_DIR
+adb pull /system/lib/libWVphoneAPI.so $PROP_LIB_DIR
+adb pull /system/lib/libXT9Engine.so $PROP_LIB_DIR
+
 
 
 adb pull /system/lib/modules/ccci.ko $PROP_LIB_DIR
