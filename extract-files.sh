@@ -349,7 +349,6 @@ adb pull /system/lib/soundfx/libvisualizer.so $PROP_LIB_DIR
 adb pull /system/lib/soundfx/libaudiopreprocessing.so $PROP_LIB_DIR
 adb pull /system/lib/soundfx/libdownmix.so $PROP_LIB_DIR
 adb pull /system/lib/soundfx/libsoundaurawrapper.so $PROP_LIB_DIR
-adb pull /system/lib/soundfx/libhearingprotection.so $PROP_LIB_DIR
 adb pull /system/lib/soundfx/libpreeffectwrapper.so $PROP_LIB_DIR
 adb pull /system/lib/soundfx/libposteffectwrapper.so $PROP_LIB_DIR
 
@@ -673,7 +672,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudiopreprocessing.so:system/lib/soundfx/libaudiopreprocessing.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdownmix.so:system/lib/soundfx/libdownmix.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsoundaurawrapper.so:system/lib/soundfx/libsoundaurawrapper.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libhearingprotection.so:system/lib/soundfx/libhearingprotection.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libpreeffectwrapper.so:system/lib/soundfx/libpreeffectwrapper.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libposteffectwrapper.so:system/lib/soundfx/libposteffectwrapper.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libBLPP.so:system/vendor/lib/libBLPP.so  \\
