@@ -20,7 +20,7 @@ OUTDIR=vendor/$VENDOR/$DEVICE
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),c2305)
+ifeq (\$(TARGET_DEVICE),arima89_we_s_jb2)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libglslcompiler.so

@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/sony/c2305/BoardConfigVendor.mk
+-include vendor/sony/arima89_we_s_jb2/BoardConfigVendor.mk
 
 
 USE_OPENGL_RENDERER := true
@@ -29,6 +29,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1258291200 #0x000000004b000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648 #1073741824 #0x0000000040000000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/sony/c2305/kernel
+TARGET_PREBUILT_KERNEL := device/sony/arima89_we_s_jb2/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
