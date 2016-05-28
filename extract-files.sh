@@ -72,7 +72,7 @@ adb pull /system/vendor/bin/pvrsrvctl $PROP_BIN_DIR
 adb pull /system/vendor/bin/rc.fac $PROP_BIN_DIR
 
 
-
+adb pull /system/bin/install-recovery.sh  $PROP_BIN_DIR
 adb pull /system/bin/6620_launcher $PROP_BIN_DIR
 adb pull /system/bin/6620_wmt_concurrency $PROP_BIN_DIR
 adb pull /system/bin/akmd8963 $PROP_BIN_DIR
@@ -436,6 +436,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/akmd8963:system/bin/akmd8963 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/akmd8975:system/bin/akmd8975 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/atcid:system/bin/atcid \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/install-recovery.sh:system/bin/install-recovery.sh \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/atci_service:system/bin/atci_service \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/btconfig:system/bin/btconfig \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/btlogmask:system/bin/btlogmask \\
