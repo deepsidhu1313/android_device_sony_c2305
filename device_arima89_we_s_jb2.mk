@@ -3,7 +3,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/sony/arima89_we_s_jb2/device-vendor-blobs.mk)
+$(call inherit-product-if-exists, vendor/sony/arima89_we_s_jb2/arima89_we_s_jb2-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/sony/arima89_we_s_jb2/overlay
 
