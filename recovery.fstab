@@ -1,10 +1,11 @@
 # mount point	fstype    device    	[device2]
 /tmp	(null)	ramdisk	(null)	0
-/boot	/boot	mtd	(null)	0
-/cache	/cache	yaffs2	(null)	0
-/data	/data	yaffs2	(null)	0
-/misc	/misc	mtd	(null)	0
-/recovery	/recovery	mtd	(null)	0
-/sdcard	/dev/block/mmcblk1p1	vfat	(null)	0
-/system	/system	ext4	(null)	0
-/sd-ext	/dev/block/mmcblk1p2	auto	(null)	0
+/dev/bootimg	/boot	emmc	/boot		0
+/emmc@cache	/cache	ext4	/cache	0
+/emmc@usrdata	/data	ext4	/data	0
+/dev/misc	/misc	emmc	/misc	0
+/dev/recovery	/recovery	emmc	/recovery	0
+/dev/block/mmcblk1p1	/sdcard	vfat	(null)	0
+/emmc@android	/system	ext4	/system	0
+/dev/block/mmcblk1p2	/sd-ext	auto	(null)	0
+/emmc@fat /emmc	vfat (null) 0
