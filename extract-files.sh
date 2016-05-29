@@ -420,7 +420,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/YGPS.apk:system/app/YGPS.apk  \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/LocationEM.apk:system/app/LocationEM.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/dm.apk:system/app/dm.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DrmDialogs.apk:system/app/DrmDialogs.apk \\ 
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DrmDialogs.apk:system/app/DrmDialogs.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DrmProvider.apk:system/app/DrmProvider.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/mediatek-common.jar:system/framework/mediatek-common.jar \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/mediatek-framework.jar:system/framework/mediatek-framework.jar \\
@@ -498,7 +498,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/WIFI_RAM_CODE_E6:system/etc/firmware/WIFI_RAM_CODE_E6 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/WIFI_RAM_CODE_MT6628:system/etc/firmware/WIFI_RAM_CODE_MT6628 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/WMT.cfg:system/etc/firmware/WMT.cfg \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/fm_cust.cfg:system/etc/fmr/fm_cust.cfg \\ 
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/fm_cust.cfg:system/etc/fmr/fm_cust.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbessound_mtk.so:system/lib/libbessound_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbluetoothem_mtk.so:system/lib/libbluetoothem_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbluetooth_mtk.so:system/lib/libbluetooth_mtk.so \\
@@ -714,7 +714,7 @@ PRODUCT_PACKAGES += \\
     YGPS  \\
     LocationEM \\
     dm \\
-    DrmDialogs \\ 
+    DrmDialogs \\
     DrmProvider \\
     mediatek-res \\
     theme-res-mint \\
