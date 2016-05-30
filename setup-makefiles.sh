@@ -1,4 +1,4 @@
-VENDOR=Sony
+VENDOR=sony
 OUTDIR=vendor/$VENDOR/$DEVICE
 
 (cat << EOF) > ../../../$OUTDIR/Android.mk
@@ -20,11 +20,11 @@ OUTDIR=vendor/$VENDOR/$DEVICE
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),C2305)
+ifeq (\$(TARGET_DEVICE),arima89_we_s_jb2)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libglslcompiler.so
-LOCAL_MODULE_OWNER := Sony
+LOCAL_MODULE_OWNER := sony
 LOCAL_SRC_FILES := proprietary/lib/libglslcompiler.so
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
