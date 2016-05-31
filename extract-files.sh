@@ -104,6 +104,18 @@ adb pull /system/bin/updatemiscta $PROP_BIN_DIR
 adb pull /system/bin/wlan_loader $PROP_BIN_DIR
 
 
+
+adb pull /system/xbin/daemonsu
+adb pull /system/xbin/dexdump
+adb pull /system/xbin/gtestmiscta
+adb pull /system/xbin/gtestta
+adb pull /system/xbin/libmnlp_mt6628
+adb pull /system/xbin/misctatest
+adb pull /system/xbin/mnld
+adb pull /system/xbin/su
+adb pull /system/xbin/tatest
+
+
 # Change permissions of binaries recursively 
 chmod -Rv 755 $PROP_BIN_DIR
 
@@ -158,6 +170,73 @@ adb pull /system/etc/firmware/WIFI_RAM_CODE_MT6628 $PROP_ETC_DIR
 adb pull /system/etc/firmware/WMT.cfg $PROP_ETC_DIR
 
 adb pull /system/etc/fmr/fm_cust.cfg $PROP_ETC_DIR #FM RADIO CONFIG FILE
+
+adb pull /system/etc/agps_profiles_conf.xml $PROP_ETC_DIR 
+adb pull /system/etc/custom.conf $PROP_ETC_DIR
+adb pull /system/etc/dbus.conf $PROP_ETC_DIR
+adb pull /system/etc/default-capability.xml $PROP_ETC_DIR
+adb pull /system/etc/disableapplist.txt $PROP_ETC_DIR
+adb pull /system/etc/dop.iso $PROP_ETC_DIR
+adb pull /system/etc/drm_chmod $PROP_ETC_DIR
+adb pull /system/etc/epo_conf.xml $PROP_ETC_DIR
+adb pull /system/etc/factory.ini $PROP_ETC_DIR
+adb pull /system/etc/geocoding.db $PROP_ETC_DIR
+adb pull /system/etc/iddd.conf $PROP_ETC_DIR
+adb pull /system/etc/init.goldfish.sh $PROP_ETC_DIR
+adb pull /system/etc/install-recovery.sh $PROP_ETC_DIR
+adb pull /system/etc/mtklog-config.prop $PROP_ETC_DIR
+adb pull /system/etc/mtk_omx_core.cfg $PROP_ETC_DIR
+adb pull /system/etc/player.cfg $PROP_ETC_DIR
+adb pull /system/etc/recovery-resource.dat $PROP_ETC_DIR
+adb pull /system/etc/resmonwhitelist.txt $PROP_ETC_DIR
+adb pull /system/etc/spn-conf.xml $PROP_ETC_DIR
+adb pull /system/etc/throttle.sh $PROP_ETC_DIR
+adb pull /system/etc/virtual-spn-conf-by-efpnn.xml $PROP_ETC_DIR
+adb pull /system/etc/virtual-spn-conf-by-efspn.xml $PROP_ETC_DIR
+adb pull /system/etc/virtual-spn-conf-by-imsi.xml $PROP_ETC_DIR
+adb pull /system/etc/vold.fstab $PROP_ETC_DIR
+adb pull /system/etc/vold.fstab.nand $PROP_ETC_DIR
+adb pull /system/etc/xlog-filter-default $PROP_ETC_DIR
+adb pull /system/etc/xlog-filter-tags $PROP_ETC_DIR
+adb pull /system/etc/.installed_su_daemon $PROP_ETC_DIR
+adb pull /system/etc/bluetooth/audio.conf $PROP_ETC_DIR
+adb pull /system/etc/bluetooth/auto_pairing.conf $PROP_ETC_DIR
+adb pull /system/etc/bluetooth/blacklist.conf $PROP_ETC_DIR
+adb pull /system/etc/bluetooth/input.conf $PROP_ETC_DIR
+adb pull /system/etc/bluetooth/network.conf $PROP_ETC_DIR
+adb pull /system/etc/radvd/radvd.conf $PROP_ETC_DIR
+adb pull /system/etc/ril/oper.lis $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/keyword/1.xml $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/keyword/2.xml $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/keyword/3.xml $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/training/ubmfile/64.dat $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/training/ubmfile/128.dat $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/command_3and23.dic $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/command_6and23.dic $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/commandfilr.dic $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/commandfilr2.dic $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/command_only23.dic $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/GMMModel1.bin $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/GMMModel2.bin $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/GMMModel3.bin $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/Model1.bin $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/Model2.bin $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/Model3.bin $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/modefile/Model_M_gmmfea39d.dat $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/uipattern/Chinese-Mandarin/cmd_pattern $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/uipattern/Chinese-Taiwan/cmd_pattern $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/uipattern/English/cmd_pattern $PROP_ETC_DIR
+adb pull /system/etc/wide-dhcpv6/dhcp6c.conf $PROP_ETC_DIR
+adb pull /system/etc/wide-dhcpv6/dhcp6c.script $PROP_ETC_DIR
+adb pull /system/etc/wide-dhcpv6/dhcp6cctlkey $PROP_ETC_DIR
+adb pull /system/etc/wide-dhcpv6/dhcp6cDNS.conf $PROP_ETC_DIR
+adb pull /system/etc/wide-dhcpv6/dhcp6s.conf $PROP_ETC_DIR
+adb pull /system/etc/wifi/p2p_supplicant.conf $PROP_ETC_DIR
+adb pull /system/etc/wifi/wpa_supplicant.conf $PROP_ETC_DIR
+adb pull /system/etc/.tp/thermal.conf $PROP_ETC_DIR
+adb pull /system/etc/.tp/thermal.off.conf $PROP_ETC_DIR
+adb pull /system/etc/.tp/.ht120.mtc $PROP_ETC_DIR
+
 
 #mtk 6628 files end
 
