@@ -1040,7 +1040,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/xlog:/system/bin/xlog \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/xssm:/system/bin/xssm \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/agps_profiles_conf.xml:/system/etc/agps_profiles_conf.xml \\ 
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/agps_profiles_conf.xml:/system/etc/agps_profiles_conf.xml \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/custom.conf:/system/etc/custom.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dbus.conf:/system/etc/dbus.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/default-capability.xml:/system/etc/default-capability.xml \\

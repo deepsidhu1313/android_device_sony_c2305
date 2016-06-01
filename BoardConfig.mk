@@ -1,3 +1,4 @@
+
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
@@ -5,7 +6,7 @@ USE_CAMERA_STUB := true
 
 
 USE_OPENGL_RENDERER := true
-
+BOARD_EGL_CFG := device/sony/arima89_we_s_jb2/config/egl/egl.cfg
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := MT6589
@@ -32,3 +33,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_PREBUILT_KERNEL := device/sony/arima89_we_s_jb2/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+
+TARGET_OTA_ASSERT_DEVICE := C2305,c2305
