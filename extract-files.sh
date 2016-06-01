@@ -43,6 +43,31 @@ adb pull /system/app/YGPS.apk  $PROP_DIR
 adb pull /system/app/LocationEM.apk $PROP_DIR
 adb pull /system/app/dm.apk $PROP_DIR
 
+
+adb pull /system/app/AudioEffectService.apk $PROP_DIR
+adb pull /system/app/BackupRestoreConfirmation.apk $PROP_DIR
+adb pull /system/app/CameraCommon.apk $PROP_DIR
+adb pull /system/app/CameraExtensionPermission.apk $PROP_DIR
+adb pull /system/app/CellBroadcastReceiver.apk $PROP_DIR
+adb pull /system/app/CellConnService.apk $PROP_DIR
+adb pull /system/app/CertInstaller.apk $PROP_DIR
+adb pull /system/app/ClockWidgets.apk $PROP_DIR
+adb pull /system/app/Contacts.apk $PROP_DIR
+adb pull /system/app/ContactsBackupAgent.apk $PROP_DIR
+adb pull /system/app/ContactsProvider.apk $PROP_DIR
+adb pull /system/app/CredentialManagerService.apk $PROP_DIR
+adb pull /system/app/CustomizationProvider.apk $PROP_DIR
+adb pull /system/app/CustomizedApplicationInstaller.apk $PROP_DIR
+adb pull /system/app/CustomizedSettings.apk $PROP_DIR
+adb pull /system/app/DefaultCapabilities.apk $PROP_DIR
+adb pull /system/app/DefaultContainerService.apk $PROP_DIR
+adb pull /system/app/DownloadProvider.apk $PROP_DIR
+adb pull /system/app/DownloadProviderUi.apk $PROP_DIR
+adb pull /system/app/FusedLocation.apk $PROP_DIR
+
+
+
+
 #Not sure if these files are necessary for Cynogenmod
 adb pull /system/app/DrmDialogs.apk $PROP_DIR 
 adb pull /system/app/DrmProvider.apk $PROP_DIR
@@ -105,15 +130,92 @@ adb pull /system/bin/wlan_loader $PROP_BIN_DIR
 
 
 
-adb pull /system/xbin/daemonsu
-adb pull /system/xbin/dexdump
-adb pull /system/xbin/gtestmiscta
-adb pull /system/xbin/gtestta
-adb pull /system/xbin/libmnlp_mt6628
-adb pull /system/xbin/misctatest
-adb pull /system/xbin/mnld
-adb pull /system/xbin/su
-adb pull /system/xbin/tatest
+adb pull /system/xbin/daemonsu $PROP_BIN_DIR
+adb pull /system/xbin/dexdump $PROP_BIN_DIR
+adb pull /system/xbin/gtestmiscta $PROP_BIN_DIR
+adb pull /system/xbin/gtestta $PROP_BIN_DIR
+adb pull /system/xbin/libmnlp_mt6628 $PROP_BIN_DIR
+adb pull /system/xbin/misctatest $PROP_BIN_DIR
+adb pull /system/xbin/mnld $PROP_BIN_DIR
+adb pull /system/xbin/su $PROP_BIN_DIR
+adb pull /system/xbin/tatest $PROP_BIN_DIR
+
+
+adb pull /system/bin/.ext/.su $PROP_BIN_DIR
+adb pull /system/bin/abcc $PROP_BIN_DIR
+adb pull /system/bin/adb $PROP_BIN_DIR
+adb pull /system/bin/aee $PROP_BIN_DIR
+adb pull /system/bin/aee_aed $PROP_BIN_DIR
+adb pull /system/bin/aee_core_forwarder $PROP_BIN_DIR
+adb pull /system/bin/aee_dumpstate $PROP_BIN_DIR
+adb pull /system/bin/ami304d $PROP_BIN_DIR
+adb pull /system/bin/badblocks $PROP_BIN_DIR
+adb pull /system/bin/bmm050d $PROP_BIN_DIR
+adb pull /system/bin/boot_logo_updater $PROP_BIN_DIR
+adb pull /system/bin/bugmailer.sh $PROP_BIN_DIR
+adb pull /system/bin/ccci_fsd $PROP_BIN_DIR
+adb pull /system/bin/ccci_mdinit $PROP_BIN_DIR
+adb pull /system/bin/credmgrd $PROP_BIN_DIR
+adb pull /system/bin/dbus-daemon $PROP_BIN_DIR
+adb pull /system/bin/dexopt $PROP_BIN_DIR
+adb pull /system/bin/dhcp6c $PROP_BIN_DIR
+adb pull /system/bin/dhcp6ctl $PROP_BIN_DIR
+adb pull /system/bin/dhcp6s $PROP_BIN_DIR
+adb pull /system/bin/dm_agent_binder $PROP_BIN_DIR
+adb pull /system/bin/dpfd $PROP_BIN_DIR
+adb pull /system/bin/dualmdlogger $PROP_BIN_DIR
+adb pull /system/bin/ext4_resize $PROP_BIN_DIR
+adb pull /system/bin/factory $PROP_BIN_DIR
+adb pull /system/bin/fsck_msdos_mtk $PROP_BIN_DIR
+adb pull /system/bin/geomagneticd $PROP_BIN_DIR
+adb pull /system/bin/hald $PROP_BIN_DIR
+adb pull /system/bin/hd $PROP_BIN_DIR
+adb pull /system/bin/hdc $PROP_BIN_DIR
+adb pull /system/bin/iddd $PROP_BIN_DIR
+adb pull /system/bin/idd-logreader $PROP_BIN_DIR
+adb pull /system/bin/ipod $PROP_BIN_DIR
+adb pull /system/bin/ipohctl $PROP_BIN_DIR
+adb pull /system/bin/magd $PROP_BIN_DIR
+adb pull /system/bin/matv $PROP_BIN_DIR
+adb pull /system/bin/md5 $PROP_BIN_DIR
+adb pull /system/bin/mdlogger $PROP_BIN_DIR
+adb pull /system/bin/md_minilog_util $PROP_BIN_DIR
+adb pull /system/bin/memorydumper $PROP_BIN_DIR
+adb pull /system/bin/mfv_ut $PROP_BIN_DIR
+adb pull /system/bin/mksh $PROP_BIN_DIR
+adb pull /system/bin/mobile_log_d $PROP_BIN_DIR
+adb pull /system/bin/muxreport $PROP_BIN_DIR
+adb pull /system/bin/memorydumper $PROP_BIN_DIR
+adb pull /system/bin/mfv_ut $PROP_BIN_DIR
+adb pull /system/bin/mksh $PROP_BIN_DIR
+adb pull /system/bin/mobile_log_d $PROP_BIN_DIR
+adb pull /system/bin/muxreport $PROP_BIN_DIR
+adb pull /system/bin/poad $PROP_BIN_DIR
+adb pull /system/bin/pppd_dt $PROP_BIN_DIR
+adb pull /system/bin/pq $PROP_BIN_DIR
+adb pull /system/bin/radvd $PROP_BIN_DIR
+adb pull /system/bin/rildmd2 $PROP_BIN_DIR
+adb pull /system/bin/rtt $PROP_BIN_DIR
+adb pull /system/bin/sbchk $PROP_BIN_DIR
+adb pull /system/bin/schedtop $PROP_BIN_DIR
+adb pull /system/bin/screenshot $PROP_BIN_DIR
+adb pull /system/bin/sdiotool $PROP_BIN_DIR
+adb pull /system/bin/send_bug $PROP_BIN_DIR
+adb pull /system/bin/shutdown $PROP_BIN_DIR
+adb pull /system/bin/smd $PROP_BIN_DIR
+adb pull /system/bin/stp_dump3 $PROP_BIN_DIR
+adb pull /system/bin/superumount $PROP_BIN_DIR
+adb pull /system/bin/system_server $PROP_BIN_DIR
+adb pull /system/bin/tad $PROP_BIN_DIR
+adb pull /system/bin/wait4tad $PROP_BIN_DIR
+adb pull /system/bin/watchprops $PROP_BIN_DIR
+adb pull /system/bin/wipe $PROP_BIN_DIR
+adb pull /system/bin/wpa_supplicant $PROP_BIN_DIR
+adb pull /system/bin/xlog $PROP_BIN_DIR
+adb pull /system/bin/xssm $PROP_BIN_DIR
+
+
+
 
 
 # Change permissions of binaries recursively 
@@ -223,9 +325,9 @@ adb pull /system/etc/voicecommand/voiceui/modefile/Model1.bin $PROP_ETC_DIR
 adb pull /system/etc/voicecommand/voiceui/modefile/Model2.bin $PROP_ETC_DIR
 adb pull /system/etc/voicecommand/voiceui/modefile/Model3.bin $PROP_ETC_DIR
 adb pull /system/etc/voicecommand/voiceui/modefile/Model_M_gmmfea39d.dat $PROP_ETC_DIR
-adb pull /system/etc/voicecommand/voiceui/uipattern/Chinese-Mandarin/cmd_pattern $PROP_ETC_DIR
-adb pull /system/etc/voicecommand/voiceui/uipattern/Chinese-Taiwan/cmd_pattern $PROP_ETC_DIR
-adb pull /system/etc/voicecommand/voiceui/uipattern/English/cmd_pattern $PROP_ETC_DIR
+adb pull /system/etc/voicecommand/voiceui/uipattern/Chinese-Mandarin/cmd_pattern $PROP_ETC_DIR/cmd_pattern1
+adb pull /system/etc/voicecommand/voiceui/uipattern/Chinese-Taiwan/cmd_pattern $PROP_ETC_DIR/cmd_pattern2
+adb pull /system/etc/voicecommand/voiceui/uipattern/English/cmd_pattern $PROP_ETC_DIR/cmd_pattern3
 adb pull /system/etc/wide-dhcpv6/dhcp6c.conf $PROP_ETC_DIR
 adb pull /system/etc/wide-dhcpv6/dhcp6c.script $PROP_ETC_DIR
 adb pull /system/etc/wide-dhcpv6/dhcp6cctlkey $PROP_ETC_DIR
@@ -236,6 +338,80 @@ adb pull /system/etc/wifi/wpa_supplicant.conf $PROP_ETC_DIR
 adb pull /system/etc/.tp/thermal.conf $PROP_ETC_DIR
 adb pull /system/etc/.tp/thermal.off.conf $PROP_ETC_DIR
 adb pull /system/etc/.tp/.ht120.mtc $PROP_ETC_DIR
+
+adb pull /system/data/misc/ProjectConfig.mk $PROP_ETC_DIR
+adb pull /system/etc/init.d/99SuperSUDaemon $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.bluetooth.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.camera.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.faketouch.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.location.gps.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.microphone.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.sensor.accelerometer.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.sensor.compass.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.sensor.light.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.sensor.proximity.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.telephony.gsm.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.touchscreen.multitouch.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.touchscreen.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.usb.accessory.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.usb.host.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.wifi.direct.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.hardware.wifi.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/android.software.sip.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.android.location.provider.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.google.android.maps.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.google.android.media.effects.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.google.protobuf-2.3.0.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.google.widevine.software.drm.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sony.device.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sony.smallapp.framework.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.android.bootinfoif.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.android.omacp.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.android.socialphonebook.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.appextensions.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.audioeffectif.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.autopoweroff.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.cameraextension.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.colorextraction.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.dlna.playanywhere.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.dlna.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.eventstream.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.facebook.proxy_1.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.idd.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.illumination.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.media.infinite.extension_1.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.metadatacleanup.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.mimetype.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.musicvisualizer.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.navigationbar.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.nfc.handover.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.privateapis.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.renren.proxy.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.security.asahi.AsahiSignature.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.system.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.updatecenter.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.uxp.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonyericsson.uxpres.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.cameracommon.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.facebook.proxy.api.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.faceeditor.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.media.dashboard.extension.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.mediacontent.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.photoanalyzer.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.playanywhere.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.settings.illumination.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/com.sonymobile.smime.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/handheld_core_hardware.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/media_codecs.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/org.kxml2.wap.xml $PROP_ETC_DIR
+adb pull /system/etc/permissions/SemcGenericUxpRes.xml $PROP_ETC_DIR
+adb pull /system/etc/security/idd_config.pem $PROP_ETC_DIR
+adb pull /system/etc/security/idd_report.pem $PROP_ETC_DIR
+
+
+
 
 
 #mtk 6628 files end
@@ -453,6 +629,18 @@ adb pull /system/vendor/lib/egl/libGLESv2_mtk.so $PROP_LIB_DIR
 adb pull /system/vendor/lib/hw/gralloc.mt6589.so $PROP_LIB_DIR
 #vendor libs end
 
+adb pull /system/mobile_toolkit/iAmCdRom.iso $PROP_LIB_DIR
+adb pull /system/usr/icu/icudt48l.dat $PROP_LIB_DIR
+adb pull /system/usr/keychars/hid-keyboard.kcm $PROP_LIB_DIR
+adb pull /system/usr/keylayout/ACCDET.kl $PROP_LIB_DIR
+adb pull /system/usr/keylayout/hid-keyboard.kl $PROP_LIB_DIR
+adb pull /system/usr/keylayout/mtk-kpd.kl $PROP_LIB_DIR
+adb pull /system/usr/share/zoneinfo/zoneinfo.dat $PROP_LIB_DIR
+adb pull /system/usr/share/zoneinfo/zoneinfo.idx $PROP_LIB_DIR
+adb pull /system/usr/share/zoneinfo/zoneinfo.version $PROP_LIB_DIR
+
+adb pull /system/lib/egl/egl.cfg $PROP_LIB_DIR
+adb pull /system/lib/egl/libGLES_android.so $PROP_LIB_DIR
 
 
 #libs end
@@ -771,6 +959,235 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLESv1_CM_mtk.so:system/vendor/lib/egl/libGLESv1_CM_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLESv2_mtk.so:system/vendor/lib/egl/libGLESv2_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/gralloc.mt6589.so:system/vendor/lib/hw/gralloc.mt6589.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/daemonsu:/system/xbin/daemonsu \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dexdump:/system/xbin/dexdump \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/gtestmiscta:/system/xbin/gtestmiscta \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/gtestta:/system/xbin/gtestta \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/libmnlp_mt6628:/system/xbin/libmnlp_mt6628 \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/misctatest:/system/xbin/misctatest \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mnld:/system/xbin/mnld \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/su:/system/xbin/su \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/tatest:/system/xbin/tatest \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/.su:/system/bin/.ext/.su \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/abcc:/system/bin/abcc \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/adb:/system/bin/adb \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/aee:/system/bin/aee \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/aee_aed:/system/bin/aee_aed \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/aee_core_forwarder:/system/bin/aee_core_forwarder \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/aee_dumpstate:/system/bin/aee_dumpstate \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ami304d:/system/bin/ami304d \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/badblocks:/system/bin/badblocks \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/bmm050d:/system/bin/bmm050d \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/boot_logo_updater:/system/bin/boot_logo_updater \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/bugmailer.sh:/system/bin/bugmailer.sh \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ccci_fsd:/system/bin/ccci_fsd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ccci_mdinit:/system/bin/ccci_mdinit \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/credmgrd:/system/bin/credmgrd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dbus-daemon:/system/bin/dbus-daemon \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dexopt:/system/bin/dexopt \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dhcp6c:/system/bin/dhcp6c \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dhcp6ctl:/system/bin/dhcp6ctl \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dhcp6s:/system/bin/dhcp6s \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dm_agent_binder:/system/bin/dm_agent_binder \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dpfd:/system/bin/dpfd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dualmdlogger:/system/bin/dualmdlogger \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ext4_resize:/system/bin/ext4_resize \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/factory:/system/bin/factory \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/fsck_msdos_mtk:/system/bin/fsck_msdos_mtk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/geomagneticd:/system/bin/geomagneticd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/hald:/system/bin/hald \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/hd:/system/bin/hd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/hdc:/system/bin/hdc \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/iddd:/system/bin/iddd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/idd-logreader:/system/bin/idd-logreader \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ipod:/system/bin/ipod \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/ipohctl:/system/bin/ipohctl \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/magd:/system/bin/magd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/matv:/system/bin/matv \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/md5:/system/bin/md5 \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mdlogger:/system/bin/mdlogger \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/md_minilog_util:/system/bin/md_minilog_util \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/memorydumper:/system/bin/memorydumper \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mfv_ut:/system/bin/mfv_ut \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mksh:/system/bin/mksh \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mobile_log_d:/system/bin/mobile_log_d \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/muxreport:/system/bin/muxreport \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/memorydumper:/system/bin/memorydumper \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mfv_ut:/system/bin/mfv_ut \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mksh:/system/bin/mksh \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mobile_log_d:/system/bin/mobile_log_d \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/muxreport:/system/bin/muxreport \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/poad:/system/bin/poad \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/pppd_dt:/system/bin/pppd_dt \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/pq:/system/bin/pq \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/radvd:/system/bin/radvd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/rildmd2:/system/bin/rildmd2 \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/rtt:/system/bin/rtt \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/sbchk:/system/bin/sbchk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/schedtop:/system/bin/schedtop \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/screenshot:/system/bin/screenshot \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/sdiotool:/system/bin/sdiotool \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/send_bug:/system/bin/send_bug \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/shutdown:/system/bin/shutdown \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/smd:/system/bin/smd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/stp_dump3:/system/bin/stp_dump3 \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/superumount:/system/bin/superumount \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/system_server:/system/bin/system_server \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/tad:/system/bin/tad \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wait4tad:/system/bin/wait4tad \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/watchprops:/system/bin/watchprops \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wipe:/system/bin/wipe \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/xlog:/system/bin/xlog \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/xssm:/system/bin/xssm \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/agps_profiles_conf.xml:/system/etc/agps_profiles_conf.xml \\ 
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/custom.conf:/system/etc/custom.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dbus.conf:/system/etc/dbus.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/default-capability.xml:/system/etc/default-capability.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/disableapplist.txt:/system/etc/disableapplist.txt \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dop.iso:/system/etc/dop.iso \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/drm_chmod:/system/etc/drm_chmod \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/epo_conf.xml:/system/etc/epo_conf.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/factory.ini:/system/etc/factory.ini \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/geocoding.db:/system/etc/geocoding.db \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/iddd.conf:/system/etc/iddd.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/init.goldfish.sh:/system/etc/init.goldfish.sh \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/install-recovery.sh:/system/etc/install-recovery.sh \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/mtklog-config.prop:/system/etc/mtklog-config.prop \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/mtk_omx_core.cfg:/system/etc/mtk_omx_core.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/player.cfg:/system/etc/player.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/recovery-resource.dat:/system/etc/recovery-resource.dat \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/resmonwhitelist.txt:/system/etc/resmonwhitelist.txt \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/spn-conf.xml:/system/etc/spn-conf.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/throttle.sh:/system/etc/throttle.sh \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/virtual-spn-conf-by-efpnn.xml:/system/etc/virtual-spn-conf-by-efpnn.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/virtual-spn-conf-by-efspn.xml:/system/etc/virtual-spn-conf-by-efspn.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/virtual-spn-conf-by-imsi.xml:/system/etc/virtual-spn-conf-by-imsi.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/vold.fstab:/system/etc/vold.fstab \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/vold.fstab.nand:/system/etc/vold.fstab.nand \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/xlog-filter-default:/system/etc/xlog-filter-default \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/xlog-filter-tags:/system/etc/xlog-filter-tags \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/.installed_su_daemon:/system/etc/.installed_su_daemon \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/audio.conf:/system/etc/bluetooth/audio.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/auto_pairing.conf:/system/etc/bluetooth/auto_pairing.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/blacklist.conf:/system/etc/bluetooth/blacklist.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/input.conf:/system/etc/bluetooth/input.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/network.conf:/system/etc/bluetooth/network.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/radvd.conf:/system/etc/radvd/radvd.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/oper.lis:/system/etc/ril/oper.lis \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/1.xml:/system/etc/voicecommand/keyword/1.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/2.xml:/system/etc/voicecommand/keyword/2.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/3.xml:/system/etc/voicecommand/keyword/3.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/64.dat:/system/etc/voicecommand/training/ubmfile/64.dat \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/128.dat:/system/etc/voicecommand/training/ubmfile/128.dat \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/command_3and23.dic:/system/etc/voicecommand/voiceui/modefile/command_3and23.dic \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/command_6and23.dic:/system/etc/voicecommand/voiceui/modefile/command_6and23.dic \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/commandfilr.dic:/system/etc/voicecommand/voiceui/modefile/commandfilr.dic \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/commandfilr2.dic:/system/etc/voicecommand/voiceui/modefile/commandfilr2.dic \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/command_only23.dic:/system/etc/voicecommand/voiceui/modefile/command_only23.dic \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/GMMModel1.bin:/system/etc/voicecommand/voiceui/modefile/GMMModel1.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/GMMModel2.bin:/system/etc/voicecommand/voiceui/modefile/GMMModel2.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/GMMModel3.bin:/system/etc/voicecommand/voiceui/modefile/GMMModel3.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/Model1.bin:/system/etc/voicecommand/voiceui/modefile/Model1.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/Model2.bin:/system/etc/voicecommand/voiceui/modefile/Model2.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/Model3.bin:/system/etc/voicecommand/voiceui/modefile/Model3.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/Model_M_gmmfea39d.dat:/system/etc/voicecommand/voiceui/modefile/Model_M_gmmfea39d.dat \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/cmd_pattern1:/system/etc/voicecommand/voiceui/uipattern/Chinese-Mandarin/cmd_pattern \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/cmd_pattern2:/system/etc/voicecommand/voiceui/uipattern/Chinese-Taiwan/cmd_pattern \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/cmd_pattern3:/system/etc/voicecommand/voiceui/uipattern/English/cmd_pattern \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dhcp6c.conf:/system/etc/wide-dhcpv6/dhcp6c.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dhcp6c.script:/system/etc/wide-dhcpv6/dhcp6c.script \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dhcp6cctlkey:/system/etc/wide-dhcpv6/dhcp6cctlkey \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dhcp6cDNS.conf:/system/etc/wide-dhcpv6/dhcp6cDNS.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/dhcp6s.conf:/system/etc/wide-dhcpv6/dhcp6s.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/p2p_supplicant.conf:/system/etc/wifi/p2p_supplicant.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/thermal.conf:/system/etc/.tp/thermal.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/thermal.off.conf:/system/etc/.tp/thermal.off.conf \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/.ht120.mtc:/system/etc/.tp/.ht120.mtc \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/ProjectConfig.mk:/system/data/misc/ProjectConfig.mk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/99SuperSUDaemon:/system/etc/init.d/99SuperSUDaemon \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.bluetooth.xml:/system/etc/permissions/android.hardware.bluetooth.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.camera.xml:/system/etc/permissions/android.hardware.camera.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.faketouch.xml:/system/etc/permissions/android.hardware.faketouch.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.location.gps.xml:/system/etc/permissions/android.hardware.location.gps.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.microphone.xml:/system/etc/permissions/android.hardware.microphone.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.sensor.accelerometer.xml:/system/etc/permissions/android.hardware.sensor.accelerometer.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.sensor.compass.xml:/system/etc/permissions/android.hardware.sensor.compass.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.sensor.light.xml:/system/etc/permissions/android.hardware.sensor.light.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.sensor.proximity.xml:/system/etc/permissions/android.hardware.sensor.proximity.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.telephony.gsm.xml:/system/etc/permissions/android.hardware.telephony.gsm.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.touchscreen.multitouch.distinct.xml:/system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:/system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.touchscreen.multitouch.xml:/system/etc/permissions/android.hardware.touchscreen.multitouch.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.touchscreen.xml:/system/etc/permissions/android.hardware.touchscreen.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.usb.accessory.xml:/system/etc/permissions/android.hardware.usb.accessory.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.usb.host.xml:/system/etc/permissions/android.hardware.usb.host.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.wifi.direct.xml:/system/etc/permissions/android.hardware.wifi.direct.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.hardware.wifi.xml:/system/etc/permissions/android.hardware.wifi.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/android.software.sip.xml:/system/etc/permissions/android.software.sip.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.android.location.provider.xml:/system/etc/permissions/com.android.location.provider.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.google.android.maps.xml:/system/etc/permissions/com.google.android.maps.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.google.android.media.effects.xml:/system/etc/permissions/com.google.android.media.effects.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.google.protobuf-2.3.0.xml:/system/etc/permissions/com.google.protobuf-2.3.0.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.google.widevine.software.drm.xml:/system/etc/permissions/com.google.widevine.software.drm.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sony.device.xml:/system/etc/permissions/com.sony.device.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sony.smallapp.framework.xml:/system/etc/permissions/com.sony.smallapp.framework.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.android.bootinfoif.xml:/system/etc/permissions/com.sonyericsson.android.bootinfoif.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.android.omacp.xml:/system/etc/permissions/com.sonyericsson.android.omacp.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.android.socialphonebook.xml:/system/etc/permissions/com.sonyericsson.android.socialphonebook.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.appextensions.xml:/system/etc/permissions/com.sonyericsson.appextensions.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.audioeffectif.xml:/system/etc/permissions/com.sonyericsson.audioeffectif.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.autopoweroff.xml:/system/etc/permissions/com.sonyericsson.autopoweroff.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.cameraextension.xml:/system/etc/permissions/com.sonyericsson.cameraextension.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.colorextraction.xml:/system/etc/permissions/com.sonyericsson.colorextraction.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.dlna.playanywhere.xml:/system/etc/permissions/com.sonyericsson.dlna.playanywhere.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.dlna.xml:/system/etc/permissions/com.sonyericsson.dlna.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.eventstream.xml:/system/etc/permissions/com.sonyericsson.eventstream.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.facebook.proxy_1.xml:/system/etc/permissions/com.sonyericsson.facebook.proxy_1.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.idd.xml:/system/etc/permissions/com.sonyericsson.idd.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.illumination.xml:/system/etc/permissions/com.sonyericsson.illumination.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.media.infinite.extension_1.xml:/system/etc/permissions/com.sonyericsson.media.infinite.extension_1.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.metadatacleanup.xml:/system/etc/permissions/com.sonyericsson.metadatacleanup.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.mimetype.xml:/system/etc/permissions/com.sonyericsson.mimetype.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.musicvisualizer.xml:/system/etc/permissions/com.sonyericsson.musicvisualizer.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.navigationbar.xml:/system/etc/permissions/com.sonyericsson.navigationbar.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.nfc.handover.xml:/system/etc/permissions/com.sonyericsson.nfc.handover.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.privateapis.xml:/system/etc/permissions/com.sonyericsson.privateapis.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.renren.proxy.xml:/system/etc/permissions/com.sonyericsson.renren.proxy.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.security.asahi.AsahiSignature.xml:/system/etc/permissions/com.sonyericsson.security.asahi.AsahiSignature.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.system.xml:/system/etc/permissions/com.sonyericsson.system.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.updatecenter.xml:/system/etc/permissions/com.sonyericsson.updatecenter.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.uxp.xml:/system/etc/permissions/com.sonyericsson.uxp.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonyericsson.uxpres.xml:/system/etc/permissions/com.sonyericsson.uxpres.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.cameracommon.xml:/system/etc/permissions/com.sonymobile.cameracommon.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.facebook.proxy.api.xml:/system/etc/permissions/com.sonymobile.facebook.proxy.api.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.faceeditor.xml:/system/etc/permissions/com.sonymobile.faceeditor.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.media.dashboard.extension.xml:/system/etc/permissions/com.sonymobile.media.dashboard.extension.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.mediacontent.xml:/system/etc/permissions/com.sonymobile.mediacontent.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.photoanalyzer.xml:/system/etc/permissions/com.sonymobile.photoanalyzer.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.playanywhere.xml:/system/etc/permissions/com.sonymobile.playanywhere.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.settings.illumination.xml:/system/etc/permissions/com.sonymobile.settings.illumination.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/com.sonymobile.smime.xml:/system/etc/permissions/com.sonymobile.smime.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/handheld_core_hardware.xml:/system/etc/permissions/handheld_core_hardware.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/media_codecs.xml:/system/etc/permissions/media_codecs.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/org.kxml2.wap.xml:/system/etc/permissions/org.kxml2.wap.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/SemcGenericUxpRes.xml:/system/etc/permissions/SemcGenericUxpRes.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/idd_config.pem:/system/etc/security/idd_config.pem \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/idd_report.pem:/system/etc/security/idd_report.pem \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/iAmCdRom.iso:/system/mobile_toolkit/iAmCdRom.iso \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/icudt48l.dat:/system/usr/icu/icudt48l.dat \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hid-keyboard.kcm:/system/usr/keychars/hid-keyboard.kcm \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/ACCDET.kl:/system/usr/keylayout/ACCDET.kl \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hid-keyboard.kl:/system/usr/keylayout/hid-keyboard.kl \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/mtk-kpd.kl:/system/usr/keylayout/mtk-kpd.kl \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/zoneinfo.dat:/system/usr/share/zoneinfo/zoneinfo.dat \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/zoneinfo.idx:/system/usr/share/zoneinfo/zoneinfo.idx \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/zoneinfo.version:/system/usr/share/zoneinfo/zoneinfo.version \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/egl.cfg:/system/lib/egl/egl.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLES_android.so:/system/lib/egl/libGLES_android.so \\
+
+
 # All the apks necessary for arima89_we_s_jb2
 PRODUCT_PACKAGES += \\
     MTKAndroidSuiteDaemon \\
