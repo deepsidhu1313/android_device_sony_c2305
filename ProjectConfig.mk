@@ -160,7 +160,7 @@ CUSTOM_LK_LCM = hx8389b_qhd_dsi_vdo_byd
 #//>2013/04/24-24221-stevenchen
 #//<2013/03/18-22930-Cokychen, [5860][DRV] Comb band1/5 & band1/8 support by detect GPIO
 #//<2013/03/26-23217-tonypeng, Update DRIVER modem image for MTK modem codebase upgrade.
-CUSTOM_MODEM = arima89_we_s_jb2_md1_hspa_s1
+CUSTOM_MODEM = C2305_md1_hspa_s1
 #//>2013/03/26-23217-tonypeng
 #//>2013/03/18-22930-cokychen
 CUSTOM_PRELOADER_CUSTOM=custom

@@ -9,4 +9,3 @@
 /dev/block/mmcblk0p7	/system	ext4	/system	0
 /dev/block/mmcblk1p1	/sdcard	vfat	(null)	0
 /dev/block/mmcblk1p2	/sd-ext	auto	(null)	0
-

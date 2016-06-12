@@ -2,11 +2,33 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/sony/arima89_we_s_jb2/BoardConfigVendor.mk
+-include vendor/Sony/C2305/BoardConfigVendor.mk
+
+# eMMC support
+ifeq ($(MTK_EMMC_SUPPORT),yes)
+TARGET_USERIMAGES_USE_EXT4:=true
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
+endif
+
+TARGET_CPU_SMP := true
 
 
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/sony/arima89_we_s_jb2/config/egl/egl.cfg
+BOARD_EGL_CFG := device/Sony/C2305/config/egl/egl.cfg
+
+
+TARGET_NO_FACTORYIMAGE := true
+
+# for migrate build system
+# temporarily open this two options
+HAVE_HTC_AUDIO_DRIVER := true
+#BOARD_USES_GENERIC_AUDIO := true
+ 
+BOARD_USES_MTK_AUDIO := true
+
+TARGET_OTA_ASSERT_DEVICE := arima89_we_s_jb2
+
+
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := MT6589
@@ -17,7 +39,7 @@ TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_BOOTLOADER_BOARD_NAME := arima89_we_s_jb2
+TARGET_BOOTLOADER_BOARD_NAME := C2305
 
 BOARD_KERNEL_CMDLINE := 
 BOARD_KERNEL_BASE := 0x10000000
@@ -30,9 +52,59 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1258291200 #0x000000004b000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648 #1073741824 #0x0000000040000000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/sony/arima89_we_s_jb2/kernel
+TARGET_PREBUILT_KERNEL := device/Sony/C2305/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 
-TARGET_OTA_ASSERT_DEVICE := C2305,c2305
+BOARD_MTK_LIBSENSORS_NAME :=
+BOARD_MTK_LIB_SENSOR :=
+
+# MTK, Baochu Wang, 20101130, Add A-GPS {
+ifeq ($(MTK_AGPS_APP), yes)
+   BOARD_AGPS_SUPL_LIBRARIES := true
+else
+   BOARD_AGPS_SUPL_LIBRARIES := false
+endif
+# MTK, Baochu Wang, 20101130, Add A-GPS }
+
+ifeq ($(MTK_GPS_SUPPORT), yes)
+  BOARD_GPS_LIBRARIES := true
+else
+  BOARD_GPS_LIBRARIES := false
+endif
+
+# MTK, Infinity, 20090720, Add WiFi {
+ifeq ($(MTK_WLAN_SUPPORT), yes)
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+BOARD_P2P_SUPPLICANT_DRIVER := NL80211
+HAVE_CUSTOM_WIFI_DRIVER_2 := true
+HAVE_INTERNAL_WPA_SUPPLICANT_CONF := true
+HAVE_CUSTOM_WIFI_HAL := mediatek
+WPA_SUPPLICANT_VERSION := VER_0_6_X
+P2P_SUPPLICANT_VERSION := VER_0_8_X
+endif
+# MTK, Infinity, 20090720, Add WiFi }
+
+TARGET_KMODULES := true
+
+TARGET_ARCH_VARIANT := armv7-a-neon
+
+ifeq ($(strip $(MTK_NAND_PAGE_SIZE)), 4K)
+  BOARD_NAND_PAGE_SIZE := 4096 -s 128
+else
+  BOARD_NAND_PAGE_SIZE := 2048 -s 64   # default 2K
+endif
+
+WITH_DEXPREOPT := false
+
+# 20130529,25471,by Marysun for Add TARGET_BOARD_PLATFORM in BoardConfig.mk for MTBF IddAgent
+ifeq ($(ARIMA_PCBA_RELEASE),no)
+TARGET_BOARD_PLATFORM := MT6589
+endif
+# 20130529,25471,by Marysun
+
+# include all config files
+include device/Sony/C2305/configs/*.mk
+
+
