@@ -191,9 +191,11 @@ adb pull /system/bin/mksh $PROP_BIN_DIR
 adb pull /system/bin/mobile_log_d $PROP_BIN_DIR
 adb pull /system/bin/muxreport $PROP_BIN_DIR
 adb pull /system/bin/poad $PROP_BIN_DIR
+adb pull /system/bin/pppd $PROP_BIN_DIR
 adb pull /system/bin/pppd_dt $PROP_BIN_DIR
 adb pull /system/bin/pq $PROP_BIN_DIR
 adb pull /system/bin/radvd $PROP_BIN_DIR
+adb pull /system/bin/rild $PROP_BIN_DIR
 adb pull /system/bin/rildmd2 $PROP_BIN_DIR
 adb pull /system/bin/rtt $PROP_BIN_DIR
 adb pull /system/bin/sbchk $PROP_BIN_DIR
@@ -213,8 +215,18 @@ adb pull /system/bin/wipe $PROP_BIN_DIR
 adb pull /system/bin/wpa_supplicant $PROP_BIN_DIR
 adb pull /system/bin/xlog $PROP_BIN_DIR
 adb pull /system/bin/xssm $PROP_BIN_DIR
+adb pull /system/bin/orientationd $PROP_BIN_DIR
+adb pull /system/bin/permission_check $PROP_BIN_DIR
 
+#pittpatt files
 
+adb pull /vendor/pittpatt/models/recognition/face.face.y0-y0-22-b-N/full_model.bin  $PROP_BIN_DIR/full_model1.bin
+adb pull /vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/right_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-2/full_model.bin $PROP_BIN_DIR/full_model2.bin
+adb pull /vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin $PROP_BIN_DIR/full_model3.bin
+adb pull /vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin $PROP_BIN_DIR/full_model4.bin
+adb pull /vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-r0-ri30.4a-v24/full_model.bin $PROP_BIN_DIR/full_model5.bin
+adb pull /vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rp30-ri30.5-v24/full_model.bin $PROP_BIN_DIR/full_model6.bin
+adb pull /vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rn30-ri30.5-v24/full_model.bin $PROP_BIN_DIR/full_model7.bin
 
 
 
@@ -409,8 +421,8 @@ adb pull /system/etc/permissions/org.kxml2.wap.xml $PROP_ETC_DIR
 adb pull /system/etc/permissions/SemcGenericUxpRes.xml $PROP_ETC_DIR
 adb pull /system/etc/security/idd_config.pem $PROP_ETC_DIR
 adb pull /system/etc/security/idd_report.pem $PROP_ETC_DIR
-
-
+adb pull /system/etc/throttle.sh $PROP_ETC_DIR
+adb pull /system/etc/audio_policy.conf $PROP_ETC_DIR
 
 
 
@@ -627,7 +639,65 @@ adb pull /system/vendor/lib/egl/libEGL_mtk.so $PROP_LIB_DIR
 adb pull /system/vendor/lib/egl/libGLESv1_CM_mtk.so $PROP_LIB_DIR
 adb pull /system/vendor/lib/egl/libGLESv2_mtk.so $PROP_LIB_DIR
 adb pull /system/vendor/lib/hw/gralloc.mt6589.so $PROP_LIB_DIR
+
+
 #vendor libs end
+
+adb pull /system/lib/hw/hwcomposer.mt6589.so $PROP_LIB_DIR
+adb pull /system/lib/hw/gps.default.so $PROP_LIB_DIR
+adb pull /system/lib/hw/lights.default.so $PROP_LIB_DIR
+adb pull /system/lib/hw/power.default.so $PROP_LIB_DIR
+adb pull /system/lib/hw/local_time.default.so $PROP_LIB_DIR
+adb pull /system/lib/hw/camera.default.so $PROP_LIB_DIR
+adb pull /system/lib/hw/sensors.default.so $PROP_LIB_DIR
+adb pull /system/lib/hw/gralloc.default.so $PROP_LIB_DIR
+adb pull /system/lib/hw/keystore.default.so $PROP_LIB_DIR
+adb pull /system/lib/libkeystore_client.so $PROP_LIB_DIR
+
+adb pull /system/lib/libm4u.so $PROP_LIB_DIR
+adb pull /system/lib/libdpframework.so $PROP_LIB_DIR
+adb pull /system/lib/libdpframework_os.so $PROP_LIB_DIR
+adb pull /system/lib/libdpframework_plat.so $PROP_LIB_DIR
+adb pull /system/lib/libion.so $PROP_LIB_DIR
+
+
+adb pull /system/lib/libaudiocustparam.so $PROP_LIB_DIR
+adb pull /system/lib/libacdk.so $PROP_LIB_DIR
+adb pull /system/lib/libimageio.so $PROP_LIB_DIR
+adb pull /system/lib/libcamdrv.so $PROP_LIB_DIR
+adb pull /system/lib/libbwc.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.utils.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.paramsmgr.so $PROP_LIB_DIR
+adb pull /system/lib/libaed.so $PROP_LIB_DIR
+adb pull /system/lib/libcameracustom.so $PROP_LIB_DIR
+adb pull /system/lib/libcam_camera_exif.so $PROP_LIB_DIR
+adb pull /system/lib/libmatv_cust.so $PROP_LIB_DIR
+adb pull /system/lib/libfeatureio.so $PROP_LIB_DIR
+adb pull /system/lib/libcamalgo.so $PROP_LIB_DIR
+adb pull /system/lib/lib3a.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.client.so $PROP_LIB_DIR
+adb pull /system/lib/libmpo.so $PROP_LIB_DIR
+adb pull /system/lib/libmpoencoder.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.camshot.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.campipe.so $PROP_LIB_DIR
+adb pull /system/lib/libcam.camadapter.so $PROP_LIB_DIR
+adb pull /system/lib/libJpgEncPipe.so $PROP_LIB_DIR
+adb pull /system/lib/libjpeg.so $PROP_LIB_DIR
+adb pull /system/lib/libmmfactoryutil.so $PROP_LIB_DIR
+adb pull /system/lib/libblisrc.so $PROP_LIB_DIR
+adb pull /system/lib/libspeech_enh_lib.so $PROP_LIB_DIR
+adb pull /system/lib/libaudiosetting.so $PROP_LIB_DIR
+adb pull /system/lib/libaudiocompensationfilter.so $PROP_LIB_DIR
+adb pull /system/lib/libbessound_mtk.so $PROP_LIB_DIR
+
+adb pull /system/lib/libmedia.so $PROP_LIB_DIR
+adb pull /system/lib/libvcodec_oal.so $PROP_LIB_DIR
+adb pull /system/lib/libvcodec_utility.so $PROP_LIB_DIR
+adb pull /system/lib/libsched.so $PROP_LIB_DIR
+adb pull /system/lib/libmp4enc_xa.ca7.so $PROP_LIB_DIR
+
+adb pull /system/lib/libssladp.so $PROP_LIB_DIR
+
 
 adb pull /system/mobile_toolkit/iAmCdRom.iso $PROP_LIB_DIR
 adb pull /system/usr/icu/icudt48l.dat $PROP_LIB_DIR
@@ -644,6 +714,7 @@ adb pull /system/lib/egl/libGLES_android.so $PROP_LIB_DIR
 
 
 #libs end
+
 
 
 ##make file for vendor blobs
@@ -667,28 +738,28 @@ PRODUCT_COPY_FILES := \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libMtkOmxG711Dec.so:system/lib/libMtkOmxG711Dec.so
 # All the blobs necessary for arima89_we_s_jb2
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/MTKAndroidSuiteDaemon.apk:system/app/MTKAndroidSuiteDaemon.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/MtkBt.apk:system/app/MtkBt.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/MTKThermalManager.apk:system/app/MTKThermalManager.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/AtciService.apk:system/app/AtciService.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/BatteryWarning.apk:system/app/BatteryWarning.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/CellConnService.apk:system/app/CellConnService.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/CDS_INFO.apk:system/app/CDS_INFO.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DataUsageLockScreenClient.apk:system/app/DataUsageLockScreenClient.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/EngineerMode.apk:system/app/EngineerMode.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/EngineerModeSim.apk:system/app/EngineerModeSim.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/Radio.apk:system/app/Radio.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/OMAClientProvisioning.apk:system/app/OMAClientProvisioning.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/Omacp.apk:system/app/Omacp.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/OmaDownload.apk:system/app/OmaDownload.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/OmaV1AgentDownloadServices.apk:system/app/OmaV1AgentDownloadServices.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/VoiceCommand.apk:system/app/VoiceCommand.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/VoiceUnlock.apk:system/app/VoiceUnlock.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/YGPS.apk:system/app/YGPS.apk  \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/LocationEM.apk:system/app/LocationEM.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/dm.apk:system/app/dm.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DrmDialogs.apk:system/app/DrmDialogs.apk \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DrmProvider.apk:system/app/DrmProvider.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/MTKAndroidSuiteDaemon.apk:system/app/MTKAndroidSuiteDaemon/MTKAndroidSuiteDaemon.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/MtkBt.apk:system/app/MtkBt/MtkBt.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/MTKThermalManager.apk:system/app/MTKThermalManager/MTKThermalManager.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/AtciService.apk:system/app/AtciService/AtciService.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/BatteryWarning.apk:system/app/BatteryWarning/BatteryWarning.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/CellConnService.apk:system/app/CellConnService/CellConnService.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/CDS_INFO.apk:system/app/CDS_INFO/CDS_INFO.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DataUsageLockScreenClient.apk:system/app/DataUsageLockScreenClient/DataUsageLockScreenClient.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/EngineerMode.apk:system/app/EngineerMode/EngineerMode.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/EngineerModeSim.apk:system/app/EngineerModeSim/EngineerModeSim.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/Radio.apk:system/app/Radio/Radio.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/OMAClientProvisioning.apk:system/app/OMAClientProvisioning/OMAClientProvisioning.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/Omacp.apk:system/app/Omacp/Omacp.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/OmaDownload.apk:system/app/OmaDownload/OmaDownload.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/OmaV1AgentDownloadServices.apk:system/app/OmaV1AgentDownloadServices/OmaV1AgentDownloadServices.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/VoiceCommand.apk:system/app/VoiceCommand/VoiceCommand.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/VoiceUnlock.apk:system/app/VoiceUnlock/VoiceUnlock.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/YGPS.apk:system/app/YGPS/YGPS.apk  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/LocationEM.apk:system/app/LocationEM/LocationEM.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/dm.apk:system/app/dm/dm.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DrmDialogs.apk:system/app/DrmDialogs/DrmDialogs.apk \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/DrmProvider.apk:system/app/DrmProvider/DrmProvider.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/mediatek-common.jar:system/framework/mediatek-common.jar \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/mediatek-framework.jar:system/framework/mediatek-framework.jar \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/app/mediatek-op.jar:system/framework/mediatek-op.jar \\
@@ -727,8 +798,16 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/thermal:system/bin/thermal \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/thermal_manager:system/bin/thermal_manager \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/updatemiscta:system/bin/updatemiscta \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/orientationd:system/bin/orientationd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wlan_loader:system/bin/wlan_loader \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/mt6628_fm_rom.bin:system/etc/firmware/mt6628/mt6628_fm_rom.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/full_model1.bin:vendor/pittpatt/models/recognition/face.face.y0-y0-22-b-N/full_model.bin  \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/full_model2.bin:vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/right_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-2/full_model.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/full_model3.bin:vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/full_model4.bin:vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/full_model5.bin:vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-r0-ri30.4a-v24/full_model.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/full_model6.bin:vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rp30-ri30.5-v24/full_model.bin \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/full_model7.bin:vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rn30-ri30.5-v24/full_model.bin \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/mt6628_fm_v1_coeff.bin:system/etc/firmware/mt6628/mt6628_fm_v1_coeff.bin \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/mt6628_fm_v1_patch.bin:system/etc/firmware/mt6628/mt6628_fm_v1_patch.bin \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/mt6628_fm_v2_coeff.bin:system/etc/firmware/mt6628/mt6628_fm_v2_coeff.bin \\
@@ -766,6 +845,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/WIFI_RAM_CODE_MT6628:system/etc/firmware/WIFI_RAM_CODE_MT6628 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/WMT.cfg:system/etc/firmware/WMT.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/fm_cust.cfg:system/etc/fmr/fm_cust.cfg \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/throttle.sh:system/etc/throttle.sh \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/audio_policy.conf:system/etc/audio_policy.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbessound_mtk.so:system/lib/libbessound_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbluetoothem_mtk.so:system/lib/libbluetoothem_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbluetooth_mtk.so:system/lib/libbluetooth_mtk.so \\
@@ -959,6 +1040,21 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLESv1_CM_mtk.so:system/vendor/lib/egl/libGLESv1_CM_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLESv2_mtk.so:system/vendor/lib/egl/libGLESv2_mtk.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/gralloc.mt6589.so:system/vendor/lib/hw/gralloc.mt6589.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libm4u.so:system/lib/libm4u.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdpframework.so:system/lib/libdpframework.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdpframework_os.so:system/lib/libdpframework_os.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdpframework_plat.so:system/lib/libdpframework_plat.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libion.so:system/lib/libion.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhwcomposer.mt6589.so:system/lib/hw/hwcomposer.mt6589.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgps.default.so:system/lib/hw/gps.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lights.default.so:system/lib/hw/lights.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/power.default.so:system/lib/hw/power.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/local_time.default.so:system/lib/hw/local_time.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/camera.default.so:system/lib/hw/camera.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/sensors.default.so:system/lib/hw/sensors.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/gralloc.default.so:system/lib/hw/gralloc.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/keystore.default.so:system/lib/hw/keystore.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libkeystore_client.so:system/lib/libkeystore_client.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/daemonsu:/system/xbin/daemonsu \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/dexdump:/system/xbin/dexdump \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/gtestmiscta:/system/xbin/gtestmiscta \\
@@ -1018,9 +1114,11 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/mobile_log_d:/system/bin/mobile_log_d \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/muxreport:/system/bin/muxreport \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/poad:/system/bin/poad \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/pppd:/system/bin/pppd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/pppd_dt:/system/bin/pppd_dt \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/pq:/system/bin/pq \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/radvd:/system/bin/radvd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/rild:/system/bin/rild \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/rildmd2:/system/bin/rildmd2 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/rtt:/system/bin/rtt \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/sbchk:/system/bin/sbchk \\
@@ -1038,6 +1136,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/watchprops:/system/bin/watchprops \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wipe:/system/bin/wipe \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/permission_check:/system/bin/permission_check \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/xlog:/system/bin/xlog \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bin/xssm:/system/bin/xssm \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/etc/agps_profiles_conf.xml:/system/etc/agps_profiles_conf.xml \\
@@ -1186,6 +1285,41 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/zoneinfo.version:/system/usr/share/zoneinfo/zoneinfo.version \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/egl.cfg:/system/lib/egl/egl.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libGLES_android.so:/system/lib/egl/libGLES_android.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudiocustparam.so:system/lib/libaudiocustparam.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libacdk.so:system/lib/libacdk.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libimageio.so:system/lib/libimageio.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcamdrv.so:system/lib/libcamdrv.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbwc.so:system/lib/libbwc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcam.utils.so:system/lib/libcam.utils.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcam.paramsmgr.so:system/lib/libcam.paramsmgr.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaed.so:system/lib/libaed.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcameracustom.so:system/lib/libcameracustom.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcam_camera_exif.so:system/lib/libcam_camera_exif.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmatv_cust.so:system/lib/libmatv_cust.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libfeatureio.so:system/lib/libfeatureio.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcamalgo.so:system/lib/libcamalgo.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lib3a.so:system/lib/lib3a.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcam.client.so:system/lib/libcam.client.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmpo.so:system/lib/libmpo.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmpoencoder.so:system/lib/libmpoencoder.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcam.camshot.so:system/lib/libcam.camshot.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcam.campipe.so:system/lib/libcam.campipe.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libcam.camadapter.so:system/lib/libcam.camadapter.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libJpgEncPipe.so:system/lib/libJpgEncPipe.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libjpeg.so:system/lib/libjpeg.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmmfactoryutil.so:system/lib/libmmfactoryutil.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libblisrc.so:system/lib/libblisrc.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libspeech_enh_lib.so:system/lib/libspeech_enh_lib.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudiosetting.so:system/lib/libaudiosetting.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libaudiocompensationfilter.so:system/lib/libaudiocompensationfilter.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libbessound_mtk.so:system/lib/libbessound_mtk.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmedia.so:system/lib/libmedia.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libvcodec_oal.so:system/lib/libvcodec_oal.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libvcodec_utility.so:system/lib/libvcodec_utility.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libsched.so:system/lib/libsched.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libmp4enc_xa.ca7.so:system/lib/libmp4enc_xa.ca7.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libssladp.so:system/lib/libssladp.so \\
+
 
 
 # All the apks necessary for arima89_we_s_jb2
