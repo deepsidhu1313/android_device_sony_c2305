@@ -1045,8 +1045,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdpframework_os.so:system/lib/libdpframework_os.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libdpframework_plat.so:system/lib/libdpframework_plat.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/libion.so:system/lib/libion.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhwcomposer.mt6589.so:system/lib/hw/hwcomposer.mt6589.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgps.default.so:system/lib/hw/gps.default.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/hwcomposer.mt6589.so:system/lib/hw/hwcomposer.mt6589.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/gps.default.so:system/lib/hw/gps.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/lights.default.so:system/lib/hw/lights.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/power.default.so:system/lib/hw/power.default.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lib/local_time.default.so:system/lib/hw/local_time.default.so \\
